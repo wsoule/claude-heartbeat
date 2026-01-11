@@ -19,7 +19,7 @@ log() {
 log "Heartbeat started"
 
 # Send minimal message to Claude using haiku model
-RESPONSE=$(claude --model haiku -p "." 2>&1)
+RESPONSE=$(claude --model haiku -p "only reply back with '.'" 2>&1)
 EXIT_CODE=$?
 
 if [ $EXIT_CODE -eq 0 ]; then
